@@ -2,18 +2,82 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
+    <!-- code added to Include Font Awesome file ,Google Fonts file 
+    and external css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/postslist.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
 </head>
 
 <body>
-    <!-- TODO: Include code for header here -->
+    <!-- code for adding header -->
+    <div class="header">
+        <button class="header-button" id="sign-up-button" onclick="openSignUp()">Sign Up</button>
+        <button class="header-button" id="sign-in-button" onclick="openSignIn()">Sign In</button>
+        <a id="pageTitle" class="header-title">Scribbler</a>
+    </div>
+    <p class="header-subtitle">
+        Explore, Imagine, Create
+    </p>
+    </div>
+    <!-- header code ends -->
+    <!-- code for modal that pops up on sign-up button click -->
+    <div class="modal" id="sign-up-modal">
+        <div class="modal-content-sign-up">
+            <div class="modal-header">
+                <label class="modal-heading">Get Started<label>
+                        <a class="cross-icon" onclick="closeSignUp()" style="float:right"><i
+                                class="fa fa-times"></i></a>
+                        <hr />
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter your name" name="name" id="name" required />
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username" name="username" id="username" required />
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" name="password" required />
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" placeholder="Re-enter your password" id="confirmPassword"
+                        name="confirmPassword" required />
+                    <button class="sign-up-button">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- code for sign-up modal ends here -->
 
+    <!-- code for modal that pops up on sign-in button click -->
+    <div class="modal" id="sign-in-modal">
+        <div class="modal-content-sign-in">
+            <div class="modal-header">
+                <label class="modal-heading">Welcome Back!<label>
+                        <a class="cross-icon" onclick="closeSignIn()" style="float:right"><i
+                                class="fa fa-times"></i></a>
+                        <hr />
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="usernameSignIn">Username</label>
+                    <input type="text" placeholder="Enter your username" id="usernameSignIn" name="usernameSignIn"
+                        required />
+                    <label for="passwordSingIn">Password</label>
+                    <input type="password" placeholder="Enter your password" id="passwordSingIn" name="passwordSingIn"
+                        required />
+                    <button class="sign-in-button">Sign In</button>
+                    <h4>Not a member? <a class="signUpText" onclick="openSignUpFromSignIn()">Sign Up<a></h4>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- code for sign-in modal ends here -->
     <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
 
     <!-- list of all posts starts here -->
     <div>
-
         <!-- post 1 starts here -->
         <div>
             <div>
@@ -27,7 +91,12 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                <p>
+                    Since JavaScript does not have any type-checking, either of these
+                    keywords can be used to declare a variable of any type (datatype) in
+                    JavaScript. Though all the three keywords are used for the same
+                    purpose, they are different.
+                </p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 </span>
@@ -48,7 +117,11 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                <p>
+                    One of the biggest challenges in software development is time. It’s
+                    something we can’t easily get more of, but linting can help us make
+                    the most out of the time we have.
+                </p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 </span>
@@ -69,7 +142,12 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+                <p>
+                    If you're a developer with a Twitter account, you've already seen
+                    everyone and their cat start a blog, YouTube channel, or Patreon. We
+                    all want to become stars, or at the very least, a recognizable name
+                    in the industry.
+                </p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 </span>
@@ -90,8 +168,13 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
-                    leads to confusion when discussing the code.</p>
+                <p>
+                    When code is not describable using words, most people have to do
+                    some mental mapping to turn it in to words. This wastes mental
+                    energy, and you run the risk of getting the mapping wrong. Different
+                    people will map to different words, which leads to confusion when
+                    discussing the code.
+                </p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 </span>
@@ -107,13 +190,19 @@
 
             <div>
                 <div>
-                    <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+                    <p>
+                        Everything you should know about ‘module’ & ‘require’ in Node.js
+                    </p>
                     <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
-                    named xyz.</p>
+                <p>
+                    Node.js treats each JavaScript file as a separate module. For
+                    instance, if you have a file containing some code and this file is
+                    named xyz.js, then this file is treated as a module in Node, and you
+                    can say that you’ve created a module named xyz.
+                </p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 </span>
@@ -122,9 +211,10 @@
         <!-- post 5 ends here -->
 
         <!-- TODO: Write code for delete post modal here -->
-
     </div>
     <!-- list of all posts ends here -->
 </body>
-
+<!-- code added to include java script -->
+<script src="../js/common.js"></script>
+<script src="../js/postslist.js"></script>
 </html>
