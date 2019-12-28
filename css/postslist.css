@@ -1,3 +1,80 @@
 body {
   background-color: #ffeedd;
 }
+.card-display {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  min-width: 40%;
+  max-width: 42%;
+  background-color: white;
+  border-radius: 25px;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+}
+.card:hover {
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-name {
+  display: flex;
+  flex-direction: colum;
+  background-color: white;
+  border-radius: 25px 0 0 25px;
+  min-width: 16%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: grey;
+  font-size: 24px;
+  padding-right: 2%;
+  padding-left: 6%;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e6e6;
+  border-radius: 0 25px 25px 0;
+  justify-content: flex-start;
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-bottom: 2%;
+}
+.card-description {
+  display: inline-block;
+  text-overflow: none;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.2em;
+  margin: 0px;
+  font-size: 17px;
+}
+
+.delete-icon {
+  color: grey;
+  float: right;
+}
+.delete-icon:hover {
+  cursor: pointer;
+}
+.ellipsis-icon {
+  color: grey;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+.ellipsis-icon:hover {
+  cursor: pointer;
+}
+.card-content-heading {
+  color: grey;
+  font-size: 20px;
+}
