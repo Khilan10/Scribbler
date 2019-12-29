@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
+  padding: 1%;
 }
 .sub-heading {
   display: flex;
@@ -72,4 +73,3 @@ body {
   display: block;
   margin-left: 44%;
 }
-
