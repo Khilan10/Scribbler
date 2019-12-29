@@ -1,88 +1,166 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <!-- code added to Include Font Awesome file ,Google Fonts file 
     and external css  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montez&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="../css/posts.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/post.css" />
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
-  </head>
-  <body>
-      <!-- code for adding header -->
+</head>
+
+<body>
+    <!-- code for adding header -->
     <div class="header">
-            <button class="header-button" id="sign-up-button" onclick="openSignUp()">Sign Up</button>
-            <button class="header-button" id="sign-in-button" onclick="openSignIn()">Sign In</button>
-            <a id="pageTitle" class="header-title">Scribbler</a>
-        </div>
-        <p class="header-subtitle">
-            Explore, Imagine, Create
-        </p>
-        </div>
-        <!-- header code ends -->
-         <!-- code for modal that pops up on sign-up button click -->
+        <button class="header-button" id="sign-up-button" onclick="openSignUp()">Sign Up</button>
+        <button class="header-button" id="sign-in-button" onclick="openSignIn()">Sign In</button>
+        <a id="pageTitle" class="header-title">Scribbler</a>
+    </div>
+    <p class="header-subtitle">
+        Explore, Imagine, Create
+    </p>
+    </div>
+    <!-- header code ends -->
+    <!-- code for modal that pops up on sign-up button click -->
     <div class="modal" id="sign-up-modal">
-            <div class="modal-content-sign-up">
-                <div class="modal-header">
-                    <label class="modal-heading">Get Started<label>
-                            <a class="cross-icon" onclick="closeSignUp()" style="float:right"><i
-                                    class="fa fa-times"></i></a>
-                            <hr />
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <label for="name">Name</label>
-                        <input type="text" placeholder="Enter your name" name="name" id="name" required />
-                        <label for="username">Username</label>
-                        <input type="text" placeholder="Enter your username" name="username" id="username" required />
-                        <label for="password">Password</label>
-                        <input type="password" placeholder="Enter your password" id="password" name="password" required />
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" placeholder="Re-enter your password" id="confirmPassword"
-                            name="confirmPassword" required />
-                        <button class="sign-up-button">Sign Up</button>
-                    </form>
-                </div>
+        <div class="modal-content-sign-up">
+            <div class="modal-header">
+                <label class="modal-heading">Get Started<label>
+                        <a class="cross-icon" onclick="closeSignUp()" style="float:right"><i
+                                class="fa fa-times"></i></a>
+                        <hr />
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter your name" name="name" id="name" required />
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username" name="username" id="username" required />
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" name="password" required />
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" placeholder="Re-enter your password" id="confirmPassword"
+                        name="confirmPassword" required />
+                    <button class="sign-up-button">Sign Up</button>
+                </form>
             </div>
         </div>
-        <!-- code for sign-up modal ends here -->
-    
-        <!-- code for modal that pops up on sign-in button click -->
-        <div class="modal" id="sign-in-modal">
-            <div class="modal-content-sign-in">
-                <div class="modal-header">
-                    <label class="modal-heading">Welcome Back!<label>
-                            <a class="cross-icon" onclick="closeSignIn()" style="float:right"><i
-                                    class="fa fa-times"></i></a>
-                            <hr />
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <label for="usernameSignIn">Username</label>
-                        <input type="text" placeholder="Enter your username" id="usernameSignIn" name="usernameSignIn"
-                            required />
-                        <label for="passwordSingIn">Password</label>
-                        <input type="password" placeholder="Enter your password" id="passwordSingIn" name="passwordSingIn"
-                            required />
-                        <button class="sign-in-button">Sign In</button>
-                        <h4>Not a member? <a class="signUpText" onclick="openSignUpFromSignIn()">Sign Up<a></h4>
-                    </form>
-                </div>
+    </div>
+    <!-- code for sign-up modal ends here -->
+
+    <!-- code for modal that pops up on sign-in button click -->
+    <div class="modal" id="sign-in-modal">
+        <div class="modal-content-sign-in">
+            <div class="modal-header">
+                <label class="modal-heading">Welcome Back!<label>
+                        <a class="cross-icon" onclick="closeSignIn()" style="float:right"><i
+                                class="fa fa-times"></i></a>
+                        <hr />
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="usernameSignIn">Username</label>
+                    <input type="text" placeholder="Enter your username" id="usernameSignIn" name="usernameSignIn"
+                        required />
+                    <label for="passwordSingIn">Password</label>
+                    <input type="password" placeholder="Enter your password" id="passwordSingIn" name="passwordSingIn"
+                        required />
+                    <button class="sign-in-button">Sign In</button>
+                    <h4>Not a member? <a class="signUpText" onclick="openSignUpFromSignIn()">Sign Up<a></h4>
+                </form>
             </div>
         </div>
-        <!-- code for sign-in modal ends here -->
-  </body>
-  <!-- code added to include java script -->
+    </div>
+    <!-- code for sign-in modal ends here -->
+
+    <!--  code for post heading starts here-->
+    <div>
+        <h4 class="post-heading" id="post-heading">Everything you should know about ‘module’ & ‘require’ in Node.js</h4>
+    </div>
+    <!--  code for post heading ends here -->
+
+    <!--  code for post author and save and edit button starts here-->
+    <div class="heading-author">
+        <div class="author-name">
+            Srishti Gupta</div>
+        <div class="edit-button-div">
+            <button class="edit-button" id="edit-button" onclick="editClicked()">Edit <span class="edit-icon"><i
+                        class="fa fa-pencil-square-o" aria-hidden="true"><span></i>
+            </button>
+            <button class="save-button" id="save-button" onclick="saveClicked()">Save <span class="save-icon"><i
+                        class="fa fa-floppy-o" aria-hidden="true"><span></i>
+            </button>
+        </div>
+    </div>
+    <!--  code for post author and save and edit button ends here -->
+
+    <!--  code for post content starts here -->
+    <div class="div-post-content">
+        <p class="post-content" id="post-content">
+            Node.js treats each JavaScript file as a separate module. For
+            instance, if you have a file containing some code and this file is
+            named xyz.js, then this file is treated as a module in Node, and you
+            can say that you’ve created a module named xyz.Node.js treats each JavaScript file as a separate module. For
+            instance, if you have a file containing some code and this file is
+            named xyz.js, then this file is treated as a module in Node, and you
+            can say that you’ve created a module named xyz.
+            You have a file named circle.js which consists of the logic for calculating the area & the circumference of
+            a circle of a given radius, as given below:
+
+            circle.js
+
+            You can call circle.js file a module named circle.
+            You might be wondering why is there a need to have multiple modules? You could have just written all the
+            code in a single module. Well, it is very important to write modular code. By modular, I mean to say that
+            your code should be independent and should be loosely coupled. Imagine that there’s a large application and
+            you have all your code written in just one place, just one file. Too messy, right?How does the code written
+            inside a module run?
+            Before executing the code written inside a module, Node takes the entire code and encloses it within a
+            function wrapper. The syntax of this function wrapper is:The entire code written inside a module is private
+            to the module, unless explicitly stated (exported) otherwise.This is the most significant advantage of
+            having modules in Node.js. Even if you define a global variable in a module using var, let or const
+            keywords, the variables are scoped locally to the module rather than being scoped globally. This happens
+            because each module has a function wrapper of its own and the code written inside one function is local to
+            that function and cannot be accessed outside this function.Imagine that there are two modules — A and B. The
+            code written inside the module A is enclosed within the function wrapper corresponding to the module A.
+            Similar thing happens with the code written inside the module B. Because the code pertaining to both the
+            modules is enclosed within different functions, these functions will not be able to access the code of each
+            other. (Remember each function in JavaScript has its own local scope?) This is the reason why module A
+            cannot access the code written inside module B and vice-versa.The five parameters — exports, require,
+            module, __filename, __dirname are available inside each module in Node. Though these parameters are global
+            to the code within a module yet they are local to the module (because of the function wrapper as explained
+            above). These parameters provide valuable information related to a module.Let’s revisit the circle module,
+            which you looked at earlier. There are three constructs defined in this module — a constant variable PI, a
+            function named calculateArea and another function named calculateCircumference. An important point to keep
+            in mind is that all these constructs are private to the circle module by default. It means that you cannot
+            use these constructs in any other module unless explicitly specified.
+
+            So, the question that arises now is how do you specify something in a module that can be used by some other
+            module? This is when the module & require parameters of the function wrapper are helpful. Let’s discuss
+            these two parameters in this article.module
+            The module parameter (rather a keyword in a module in Node) refers to the object representing the current
+            module. exports is a key of the module object, the corresponding value of which is an object. The default
+            value of module.exports object is {} (empty object). You can check this by logging the value of module
+            keyword inside any module. Let’s check what is the value of module parameter inside the circle module.
+
+            circle.js
+
+            Notice that there is a console.log(module); statement at the end of the code in the file given above. When
+            you see the output, it will log the module object, which has a key named exports and the value corresponding
+            to this key is {} (an empty object).
+
+            Now, what does the module.exports object do? Well, it is used for defining stuff that can be exported by a
+            module. Whatever is exported from a module can, in turn, be made available to other modules. Exporting
+            something is quite easy. You just need to add it to the module.exports object. There are three ways to add
+            something to the module.exports object to be exported. Let’s discuss these methods one by one.
+        </p>
+    </div>
+    <!--  code for post content ends here -->
+</body>
+<!-- code added to include java script -->
 <script src="../js/common.js"></script>
 <script src="../js/post.js"></script>
+
 </html>

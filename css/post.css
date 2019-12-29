@@ -1,0 +1,67 @@
+body {
+  padding: 1%;
+}
+.heading-author {
+  display: inline;
+  margin: 40px;
+}
+.author-name {
+  float: left;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 20px;
+}
+.edit-button-div {
+  float: right;
+}
+.edit-button {
+  background-color: red;
+  width: 90px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 95%;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.save-button {
+  background-color: red;
+  width: 90px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 95%;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.edit-icon {
+  font-size: 18px;
+}
+.save-icon {
+  font-size: 18px;
+}
+input {
+  background-color: white;
+}
+.post-heading {
+  font-weight: bold;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.post-content {
+  padding-top: 1%;
+  min-width: 98%;
+  clear: both;
+  text-align: justify;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+}
+.div-post-content {
+  margin-top: 50px;
+  padding: 0px;
+}
