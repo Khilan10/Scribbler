@@ -4,6 +4,9 @@ var modalSignUp = document.getElementById('sign-up-modal');
 // this variable is defined get modal for sign-in
 var modalSignIn = document.getElementById('sign-in-modal');
 
+// this variable is defined get modal for creating new post
+var modalNewPost = document.getElementById('create-post-modal');
+
 //this method is used to show the modal for sign-up
 function openSignUp() {
   modalSignUp.style.display = 'block';
@@ -29,3 +32,14 @@ function closeSignUp() {
 function closeSignIn() {
   modalSignIn.style.display = 'none';
 }
+
+// When the user clicks anywhere outside modal, close it
+window.onclick = function(event) {
+  if (event.target == modalSignIn) {
+    modalSignIn.style.display = 'none';
+  } else if (event.target == modalSignUp) {
+    modalSignUp.style.display = 'none';
+  } else if (event.target == modalNewPost) {
+    modalNewPost.style.display = 'none';
+  }
+};
