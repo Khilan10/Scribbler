@@ -6,6 +6,14 @@ var saveButton = document.getElementById('save-button');
 var postHeading = document.getElementById('post-heading');
 // this variable is defined get post content
 var postContent = document.getElementById('post-content');
+//this variable is defined get like button
+var likeButton = document.getElementById('like-button');
+//this variable is defined get liked button
+var likedButton = document.getElementById('liked-button');
+//this variable is defined get like label
+var likeLabel = document.getElementById('like-label');
+//this variable is defined to display number of people who liked
+var noOfpeople = 1;
 
 // this method is called on click of edit button
 // this will show the save button and hide the edit button
@@ -30,4 +38,20 @@ function saveClicked() {
   postContent.style.border = 'none';
   postHeading.setAttribute('contenteditable', false);
   postContent.setAttribute('contenteditable', false);
+}
+
+//this method is called on click of Like button
+//this will hide the like button and show liked button
+//this will also change the label
+function likeClicked() {
+  likeButton.style.display = 'none';
+  likedButton.style.display = 'block';
+  likeLabel.innerHTML = noOfpeople + ' people like this!';
+}
+
+//this method is called on click of Liked button
+//this will also change the label to show the no of people who has liked
+function LikedClicked() {
+  noOfpeople++;
+  likeLabel.innerHTML = noOfpeople + ' people like this!';
 }
