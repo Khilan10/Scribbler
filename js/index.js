@@ -13,5 +13,5 @@ function closeCreatePost() {
 
 //this method is used to navigate to bloglist page
 function openAllPosts() {
-  window.location.href = '../html/postslist.html';
+  window.location.href = './html/postslist.html';
 }
