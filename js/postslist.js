@@ -15,3 +15,8 @@ function yesClicked() {
   modalDelete.style.display = 'none';
   card.style.display = 'none';
 }
+//function to be executed on click of ellipsis
+//this is used to redirect post.html
+function ellipsisClicked() {
+  window.location.href = '../html/post.html';
+}
