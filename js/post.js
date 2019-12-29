@@ -14,6 +14,10 @@ var likedButton = document.getElementById('liked-button');
 var likeLabel = document.getElementById('like-label');
 //this variable is defined to display number of people who liked
 var noOfpeople = 1;
+//this variable is used to get the comment added in text box
+var comment = document.getElementById('comment');
+//this variable is added to get the comment table
+var tableComment = document.getElementById('comment-table');
 
 // this method is called on click of edit button
 // this will show the save button and hide the edit button
@@ -54,4 +58,12 @@ function likeClicked() {
 function LikedClicked() {
   noOfpeople++;
   likeLabel.innerHTML = noOfpeople + ' people like this!';
+}
+
+//this method is executed on click on Comment Button
+//this will add the comment in top of the box
+function commentClicked() {
+  console.log('get the comment:' + comment.value);
+  tableComment.innerHTML =
+    '<tr><td>' + comment.value + '</td></tr>' + tableComment.innerHTML;
 }
