@@ -7,6 +7,9 @@ var modalSignIn = document.getElementById('sign-in-modal');
 // this variable is defined get modal for creating new post
 var modalNewPost = document.getElementById('create-post-modal');
 
+//this variable is defined get modal for delete post card
+var modalDelete = document.getElementById('delete-modal');
+
 //this method is used to show the modal for sign-up
 function openSignUp() {
   modalSignUp.style.display = 'block';
@@ -41,5 +44,7 @@ window.onclick = function(event) {
     modalSignUp.style.display = 'none';
   } else if (event.target == modalNewPost) {
     modalNewPost.style.display = 'none';
+  } else if (event.target == modalDelete) {
+    modalDelete.style.display = 'none';
   }
 };
