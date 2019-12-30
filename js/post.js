@@ -61,9 +61,10 @@ function LikedClicked() {
 }
 
 //this method is executed on click on Comment Button
-//this will add the comment in top of the box
+//this will add the comment in top of the box only if it's not null
 function commentClicked() {
-  console.log('get the comment:' + comment.value);
-  tableComment.innerHTML =
-    '<tr><td>' + comment.value + '</td></tr>' + tableComment.innerHTML;
+  if (comment.value !== '') {
+    tableComment.innerHTML =
+      '<tr><td>' + comment.value + '</td></tr>' + tableComment.innerHTML;
+  }
 }
