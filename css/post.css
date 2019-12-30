@@ -101,7 +101,7 @@ input {
   color: grey;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 14px;
-  margin: 10px 0;
+  margin: 20px 0 10px 0;
 }
 .comment-button {
   background-color: red;
